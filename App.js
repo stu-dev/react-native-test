@@ -1,10 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import 'react-native-gesture-handler';
 
 import React from 'react';
 import {
@@ -16,6 +10,8 @@ import {
   StatusBar,
 } from 'react-native';
 
+import {NavigationContainer} from '@react-navigation/native';
+
 import {
   Header,
   LearnMoreLinks,
@@ -26,7 +22,7 @@ import {
 
 const App: () => React$Node = () => {
   return (
-    <>
+    <NavigationContainer>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ScrollView
@@ -68,7 +64,7 @@ const App: () => React$Node = () => {
           </View>
         </ScrollView>
       </SafeAreaView>
-    </>
+    </NavigationContainer>
   );
 };
 
